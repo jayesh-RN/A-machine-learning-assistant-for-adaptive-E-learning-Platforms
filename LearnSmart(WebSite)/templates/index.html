@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="png" href="/static/img/icon/favicon.png">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Comaptible" content="IE=edge">
+	<title>{{title}}</title>
+	<meta name="desciption" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+	<script type="text/javascript" src="/static/js/script.js"></script>
+	<script src="https:/code.jquery.com/jquery-3.2.1.js"></script>
+	<script>
+		$(window).on('scroll', function(){
+  			if($(window).scrollTop()){
+  			  $('nav').addClass('black');
+ 			 }else {
+ 		   $('nav').removeClass('black');
+ 		 }
+		})
+	</script>
+</head>
+<body>
+
+
+<!-- Navigation Bar -->
+	<header id="header">
+		<nav>
+			<div class="logo"><img src="/static/img/icon/logo.png" alt="logo"></div>
+			<ul>
+				<!---{{request.path}}--->
+				<!--{% if request.path == '#feedBACK' %}  active {%endif%}  -->
+				<li><a class="active" href="">Home</a></li>
+				<li><a href="#about_section">About Us</a></li>
+				<li><a href="#team_section">Team</a></li>
+				<li><a href="#services_section">Services</a></li>
+				<li><a href="{% url 'contact' %}">Contact Us</a></li>
+				<li><a href="#feedBACK">Feedback</a></li>
+				<li><a href="https://www.google.com/">Placement prediction</a></li>
+			</ul>
+			<div class="srch"><input type="text" class="search" placeholder="Search here..."><img src="/static/img/icon/search.png" alt="search" onclick=slide()></div>
+			<a class="get-started" href="{% url 'login' %}">Get Started</a>
+			<img src="/static/img/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
+		</nav>
+		<div class="head-container">
+			<div class="quote">
+				<p>Transforming Education, One Click at a Time.</p>
+				<h5>Education is the cornerstone of personal growth and societal progress. It is the key that unlocks doors to knowledge, empowers individuals to reach their full potential, and cultivates critical thinking and creativity.</h5>
+			</div>
+			<div class="svg-image">
+				<img src="/static/img/extra/svg1.jpg" alt="svg">
+			</div>
+		</div>
+	</header>
+
+
+<!-- Some Popular Subjects -->
+
+	<div class="title">
+		<span>Popular Subjects on LearnSmart</span> 
+	</div>
+	<br><br>
+	<div class="course">
+		<center><div class="cbox">
+		<div class="det"><a href="{% url 'computer_courses' %}"><img src="/static/img/courses/data.png">DSA</a></div>
+		<div class="det"><a href="{% url 'development_courses' %}"><img src="/static/img/courses/computer.png">Development Courses</a></div>
+		<div class="det"><a href="{% url 'gate' %}#sample_papers"><img src="/static/img/courses/paper.png">Sample Papers</a></div>
+		<div class="det"><a href="{% url 'quiz' %}"><img src="/static/img/courses/d1.png">Daily Quiz</a></div>
+		</div></center>
+		<div class="cbox">
+		<div class="det"><a href="{% url 'gate' %}#os"><img src="/static/img/courses/book.png">Operating Systems</a></div>
+		<div class="det"><a href="{% url 'gate' %}#cn"><img src="/static/img/courses/d1.png">Computer Networks</a></div>
+		<div class="det"><a href="{% url 'gate' %}#database"><img src="/static/img/courses/algo.png">DBMS</a></div>
+		<div class="det det-last"><a href="{% url 'gate' %}#coaa"><img src="/static/img/courses/projects.png">COA</a></div>
+		</div>
+	</div>
+
+	
+<!-- ABOUT -->
+<div class="diffSection" id="about_section">
+	<center><p style="font-size: 50px; padding: 100px">About Us</p></center>
+	<div class="about-content">
+			<div class="side-image">
+				<img class="sideImage" src="/static/img/extra/e3.jpg">
+			</div>
+			<div class="side-text">
+				<h2>What do you think about us ?</h2>
+				<p>The rapid growth of digital technologies has revolutionized the education landscape, leading to the emergence of e-learning platforms that offer flexible and accessible educational experiences.<br> However, the effectiveness of these platforms can be further improved by incorporating machine learning-assisted intelligent tutoring systems. <br>This presents a novel approach to enhancing e-learning experiences through the integration of a machine learning assistant within an e-learning website.</p>
+			</div>
+	</div>
+</div>
+
+
+<!-- TEAM -->
+	<div class="diffSection" id="team_section">
+		<center><p style="font-size: 50px; padding-top: 100px; padding-bottom: 60px;">Meet our Team</p></center>
+		<div class="totalcard">
+			<div class="card">
+				<center><img src="/static/img/creator/Jayesh.jpeg"></center>
+				<center><div class="card-title">Jayesh Pandey</div>
+				<div id="detail">
+					<p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating curiosity, he will continue the learning process as long as he lives “</p>
+					<div class="duty"></div>
+					<a href="https:/www.linkedin.com/in/jayesh-pandey-486277230/" target="_blank"><button class="btn-jayesh">Follow +</button></a>
+				</div>
+				</center>
+			</div>
+			<div class="card">
+				<center><img src="/static/img/creator/Banti.png"></center>
+				<center><div class="card-title">Banti Pathak</div>
+				<div id="detail">
+					<p>“ Real education should consist of drawing the goodness and the best out of our own students. What better books can there be than the book of humanity “</p>
+					<div class="duty"></div>
+					<a href="https:/www.linkedin.com/in/banti-pathak-7842a0210/" target="_blank"><button class="btn-banti">Follow +</button></a>
+				</div>
+				</center>
+			</div>
+			<div class="card">
+				<center><img src="/static/img/creator/Arpit.jpg"></center>
+				<center><div class="card-title">Arpitshivam Pandey</div>
+				<div id="detail">
+					<p>“ Education goes beyond classrooms and textbooks; it encompasses a holistic development of individuals, nurturing their intellect, character, and values. “</p>
+					<div class="duty"></div>
+					<a href="https:/www.linkedin.com/in/arpitshivam-ajay-pandey/" target="_blank"><button class="btn-arpit">Follow +</button></a>
+				</div>
+				</center>
+			</div>
+		</div>
+	</div>
+
+
+<!-- SERVICES -->
+	<div class="service-swipe">
+		<div class="diffSection" id="services_section">
+		<center><p style="font-size: 50px; padding: 100px; padding-bottom: 40px; color: #fff;">Services</p></center>
+		</div>
+		{% load static %}
+		<a href="{% url 'computer_courses' %}"><div class="s-card"><img src="/static/img/icon/computer-courses.png"><p>Free Online Computer Courses</p></div></a>
+		<a href="{% url 'computer_courses' %}"><div class="s-card"><img src="/static/img/icon/brainbooster.png"><p>Building Concepts for Competitive Exams</p></div></a>
+		<a href="#"><div class="s-card"><img src="/static/img/icon/online-tutorials.png"><p>Online Video Lectures</p></div></a>
+		<a href="{% static "samplePapers/FINAL450_DSA.pdf" %}"><div class="s-card"><img src="/static/img/icon/papers.jpg"><p>DSA Practice Questions</p></div></a>
+		<a href="#"><div class="s-card"><img src="/static/img/icon/p3.png"><p>Performance and Ranking Report</p></div></a>
+		<a href="{% url 'contact' %}"><div class="s-card"><img src="/static/img/icon/discussion.png"><p>Discussion with Our Tutors & Mentors</p></div></a>
+		<a href="{% url 'quiz' %}"><div class="s-card"><img src="/static/img/icon/q1.png"><p>Daily Brain Teasing Questions to Improve IQ</p></div></a>
+		<a href="{% url 'contact' %}"><div class="s-card"><img src="/static/img/icon/help.png"><p>24x7 Online Support</p></div></a>
+	</div>
+
+
+
+<!-- CONTACT US 
+
+<script>
+	$(document).ready(function(){
+	  $("form").submit(function(){
+		alert('Thank You! We will reach out to you soon.');
+	  });
+	});
+</script>    
+
+	<div class="diffSection" id="contactus_section">
+		<center><p style="font-size: 50px; padding: 100px">Contact Us</p></center>
+		<div class="csec"></div>
+
+		<div class="back-contact">
+			<div class="cc">
+			<form action="{% url 'home' %}" method="post" enctype="text/plain">
+			    {% csrf_token %}
+				<label>First Name <span class="imp">*</span></label><label style="margin-left: 185px">Last Name <span class="imp">*</span></label><br>
+				<center>
+				<input type="text" name="" style="margin-right: 10px; width: 175px" required="required"><input type="text" name="lname" style="width: 175px" required="required"><br>
+				</center>
+				<label>Email <span class="imp">*</span></label><br>
+				<input type="email" name="mail" style="width: 100%" required="required"><br>
+				<label>Message <span class="imp">*</span></label><br>
+				<input type="text" name="message" style="width: 100%" required="required"><br>
+				<label>Additional Details</label><br>
+				<textarea name="addtional"></textarea><br>
+				<button type="submit" id="csubmit" onclick="alert('Thank You! We will reach out to you soon.')"> Send Message</button>
+			</form>
+
+			</div>
+		</div>
+	</div>
+-->
+
+<!-- FEEDBACK -->
+<!--<script>
+	$(document).ready(function(){
+	  $("form").submit(function(){
+		alert('Thank You for your Feedback!');
+	  });
+	});
+</script>   -->
+
+<div class="title2" id="feedBACK">
+	<span>Give Feedback</span>
+	<div class="shortdesc2">
+		<p>Please share your valuable feedback to us</p>
+	</div>
+</div>
+
+<div class="feedbox">
+	<div class="feed">
+		<!-- <form action="{% url 'home' %}" method="post" enctype="text/plain">   -->
+		<form action="{% url 'home' %}" method="get" enctype="text/plain">
+		{% csrf_token %}
+			<label for="your name">Your Name</label><br>
+			<input type="text" name="your_name" class="fname" required="required"><br>
+			<label for="email">Email Id:</label><br>
+			<input type="email" name="email" required="required"><br>
+			<label for="msg">Additional Details</label><br>
+			<textarea id="msg" name="additional"></textarea><br>
+			<button type="submit" id="csubmit" onclick="alert('Thank You for your Feedback!')">Send Message</button>
+		</form>
+	</div>
+</div>
+
+<!-- Sliding Information -->
+	<marquee style="background: linear-gradient(to right, #FA4B37, #DF2771); margin-top: 50px;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20"><div class="marqu"> “Your attitude, not your aptitude, will determine your altitude.”</div></marquee>
+
+
+<!-- FOOTER -->
+<footer>
+	<div class="footer-container">
+		<div class="left-col">
+			<img src="/static/img/icon/logo - Copy.png" style="height: 60;width: 150px;">
+			<div class="logo"></div>
+			<div class="social-media">
+				<a href="#"><img src="/static/img/icon\fb.png"></a>
+				<a href="#"><img src="/static/img/icon\insta.png"></a>
+				<a href="#"><img src="/static/img/icon\tt.png"></a>
+				<a href="#"><img src="/static/img/icon\ytube.png"></a>
+				<a href="#"><img src="/static/img/icon\linkedin.png"></a>
+			</div><br><br>
+			<p class="rights-text">Made with ❤ by Banti, Jayesh & Arpitshivam</p>
+			<br><p><img src="/static/img/icon/location.png">Thakur College of Engineering & Technology <br> Kandivali, Mumbai</p><br>
+			<p><img src="/static/img/icon/phone.png"> +91-9876-576-997<br><img src="/static/img/icon/mail.png">&nbsp; learnsmart@gmail.com</p>
+		</div>
+		<div class="right-col">
+			<h1 style="color: #fff">Our Newsletter</h1>
+			<div class="border"></div><br>
+			<p>Enter Your Email to get our News and Updates.</p>
+			<form class="newsletter-form">
+				<input class="txtb" type="email" placeholder="Enter Your Email">
+				<input class="btn" type="submit" value="Submit">
+			</form>
+		</div>
+	</div>
+</footer>
+	
+</body>
+</html>
+
+<!--
+<li><a class="active" href="">Home</a></li>
+				<li><a href="#about_section">About Us</a></li>
+				<li><a href="#team_section">Team</a></li>
+				<li><a href="#services_section">Services</a></li>
+				<li><a href="#contactus_section">Contact Us</a></li>
+				<li><a href="#feedBACK">Feedback</a></li>
+-->

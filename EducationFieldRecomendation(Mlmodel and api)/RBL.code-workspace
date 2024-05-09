@@ -1,0 +1,13 @@
+{
+    "folders": [
+		{
+			"name": "hacksparrow",
+			"path": "../.."
+		},
+		{
+			"name": "mehnat",
+			"path": "../../../../Downloads/mehnat"
+		}
+	],
+    "settings": {}
+}
