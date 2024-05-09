@@ -4,9 +4,9 @@
 This project aims to develop a machine learning assistant for an adaptive e-learning platform. The assistant will utilize machine learning algorithms to personalize the learning experience for each user, thereby improving engagement and knowledge retention.
 
 ## Contributors
-- Arpitshivam Pandey
-- Jayesh Pandey
-- Banti Pathak
+- Arpitshivam Pandey [Arpit0324](https://github.com/Arpit0324)
+- Jayesh Pandey [jayesh-RN](https://github.com/jayesh-RN)
+- Banti Pathak [Banti23](https://github.com/Banti23)
 
 ## Features
 - Personalized learning recommendations based on user behavior and performance.
